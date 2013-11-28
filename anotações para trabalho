@@ -1,0 +1,22 @@
+classes
+	*Prova
+		**materia
+		**numQuestao
+		**questoes[]
+		**notaMaxima
+	*Materia
+		**nome
+	*Questao
+		**numero
+		**descricao
+
+CadastroProvas
+	cria lista com provas
+	busca por título
+	busca por matéria
+	faixa no número de questões**
+
+	listar provas
+	editar provas
+	excluir provas
+		
