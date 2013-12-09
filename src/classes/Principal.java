@@ -13,10 +13,10 @@ public class Principal {
 		Prova prova = new Prova(matematica);
 		Prova prova2 = new Prova(portugues);
 		
-		prova.setQuestao(q1);
-		prova.setQuestao(q2);
+		prova.addQuestao(q1);
+		prova.addQuestao(q2);
 		
-		prova2.setQuestao(q3);
+		prova2.addQuestao(q3);
 		
 		
 		prova.listarQuestoes();

@@ -11,5 +11,10 @@ public class Materia {
 	public String getMateria() {
 		return nome;
 	}
+	
+	public boolean equals(Materia materia) {
+		
+		return this.nome.equals(materia.getMateria());
+	}
 
 }
