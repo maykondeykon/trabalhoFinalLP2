@@ -9,9 +9,10 @@ public class Prova {
 	private ArrayList<Questao> questoes = new ArrayList<Questao>();
 	private double notaMaxima;
 
-	public int getQtdQuestoes() {
-		return qtdQuestoes;
+	public ArrayList<Questao> getQuestoes() {
+		return questoes;
 	}
+
 
 	public double getNotaMaxima() {
 		return notaMaxima;
@@ -25,8 +26,9 @@ public class Prova {
 
 	public void addQuestao(Questao questao) {
 
-		if (!materia.equals(questao.getMateria())) {
-			System.out.println("matérias não correspondem");//criar exceção para tratar
+		if (!this.materia.equals(questao.getMateria())) {
+			System.out.println("matérias não correspondem");// criar exceção
+															// para tratar
 		} else {
 			questoes.add(questao);
 			this.qtdQuestoes++;
@@ -40,11 +42,23 @@ public class Prova {
 	}
 
 	public void listarQuestoes() {
+		System.out.println("\nProva de: " + this.materia.getNomeMateria());
 		for (int i = 0, j = 1; i < questoes.size(); i++) {
 			Questao q = questoes.get(i);
-			System.out.println("Questão " + j + "\n" + q.toString());
+			System.out.println("Questão " + j + "\n  " + q.getDescricao());
 			j++;
 		}
 	}
+	
+	public void removeQuestao(Questao questao){
+		this.questoes.remove(questao);
+		this.qtdQuestoes--;
+	}
+
+
+	public int getQtdQuestoes() {
+		return qtdQuestoes;
+	}
+	
 
 }

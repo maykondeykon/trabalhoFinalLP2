@@ -8,13 +8,13 @@ public class Materia {
 		this.nome = nome;
 	}
 
-	public String getMateria() {
+	public String getNomeMateria() {
 		return nome;
 	}
 	
 	public boolean equals(Materia materia) {
 		
-		return this.nome.equals(materia.getMateria());
+		return this.nome.equals(materia.getNomeMateria());
 	}
 
 }

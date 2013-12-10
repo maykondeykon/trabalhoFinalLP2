@@ -10,17 +10,24 @@ public class Principal {
 		Questao q2 = new Questao(matematica, "Some 2+2.");
 		Questao q3 = new Questao(portugues, "Marque a forma correta");
 		
-		Prova prova = new Prova(matematica);
+		Prova prova1 = new Prova(matematica);
 		Prova prova2 = new Prova(portugues);
 		
-		prova.addQuestao(q1);
-		prova.addQuestao(q2);
+		prova1.addQuestao(q1);
+		prova1.addQuestao(q2);
 		
 		prova2.addQuestao(q3);
 		
 		
-		prova.listarQuestoes();
-		prova2.listarQuestoes();
+		prova1.listarQuestoes();
+		//prova2.listarQuestoes();
+		
+		q1.setDescricao("Raiz quadrada de 9");
+		prova1.listarQuestoes();
+		
+		prova1.removeQuestao(q2);
+		prova1.listarQuestoes();
+		System.out.println(prova1.getQtdQuestoes());
 
 	}
 
