@@ -6,7 +6,6 @@ public class Questao {
 	private Materia materia;
 
 	public Questao(Materia materia, String descricao) {
-
 		this.materia = materia;
 		this.descricao = descricao;
 	}
@@ -16,7 +15,6 @@ public class Questao {
 	}
 
 	public String getDescricao() {
-
 		return this.descricao;
 	}
 

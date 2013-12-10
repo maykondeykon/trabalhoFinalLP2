@@ -13,7 +13,6 @@ public class Prova {
 		return questoes;
 	}
 
-
 	public double getNotaMaxima() {
 		return notaMaxima;
 	}
@@ -25,10 +24,10 @@ public class Prova {
 	}
 
 	public void addQuestao(Questao questao) {
-
 		if (!this.materia.equals(questao.getMateria())) {
-			System.out.println("matérias não correspondem");// criar exceção
-															// para tratar
+			throw new IllegalArgumentException("Questão '"
+					+ questao.getDescricao() + "' não corresponde à matéria "
+					+ this.materia.getNomeMateria());
 		} else {
 			questoes.add(questao);
 			this.qtdQuestoes++;
@@ -45,20 +44,18 @@ public class Prova {
 		System.out.println("\nProva de: " + this.materia.getNomeMateria());
 		for (int i = 0, j = 1; i < questoes.size(); i++) {
 			Questao q = questoes.get(i);
-			System.out.println("Questão " + j + "\n  " + q.getDescricao());
+			System.out.println("Questão " + j + ":\n  " + q.getDescricao());
 			j++;
 		}
 	}
-	
-	public void removeQuestao(Questao questao){
+
+	public void removeQuestao(Questao questao) {
 		this.questoes.remove(questao);
 		this.qtdQuestoes--;
 	}
 
-
 	public int getQtdQuestoes() {
 		return qtdQuestoes;
 	}
-	
 
 }
